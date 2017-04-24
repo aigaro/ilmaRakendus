@@ -15,6 +15,7 @@
 		08B02DDA1EACC137002E1780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B02DD81EACC137002E1780 /* Main.storyboard */; };
 		08B02DDC1EACC137002E1780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B02DDB1EACC137002E1780 /* Assets.xcassets */; };
 		08B02DDF1EACC137002E1780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B02DDD1EACC137002E1780 /* LaunchScreen.storyboard */; };
+		270F915F1EAE2BDC00A4CF0D /* DayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F915E1EAE2BDC00A4CF0D /* DayTableViewController.swift */; };
 		4CA442F9566B7228C5A6A4FC /* Pods_ilmaRakendus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3857794B0542D9708571E58 /* Pods_ilmaRakendus.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		08B02DDB1EACC137002E1780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08B02DDE1EACC137002E1780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08B02DE01EACC137002E1780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		270F915E1EAE2BDC00A4CF0D /* DayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTableViewController.swift; sourceTree = "<group>"; };
 		7D047B6A4009FC640B7F891D /* Pods-ilmaRakendus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ilmaRakendus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ilmaRakendus/Pods-ilmaRakendus.debug.xcconfig"; sourceTree = "<group>"; };
 		A3857794B0542D9708571E58 /* Pods_ilmaRakendus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ilmaRakendus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86F7B609A2116DE0FCE6CD1 /* Pods-ilmaRakendus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ilmaRakendus.release.xcconfig"; path = "Pods/Target Support Files/Pods-ilmaRakendus/Pods-ilmaRakendus.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				08915DBB1EACC3F30062E345 /* WeatherParser.swift */,
 				0845B26E1EAD19D500F1231B /* DayViewController.swift */,
 				0845B2701EAD1A3300F1231B /* NightViewController.swift */,
+				270F915E1EAE2BDC00A4CF0D /* DayTableViewController.swift */,
 				08B02DD81EACC137002E1780 /* Main.storyboard */,
 				08B02DDB1EACC137002E1780 /* Assets.xcassets */,
 				08B02DDD1EACC137002E1780 /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 			files = (
 				08B02DD71EACC137002E1780 /* ViewController.swift in Sources */,
 				08915DBC1EACC3F30062E345 /* WeatherParser.swift in Sources */,
+				270F915F1EAE2BDC00A4CF0D /* DayTableViewController.swift in Sources */,
 				08B02DD51EACC137002E1780 /* AppDelegate.swift in Sources */,
 				0845B2711EAD1A3300F1231B /* NightViewController.swift in Sources */,
 				0845B26F1EAD19D500F1231B /* DayViewController.swift in Sources */,
