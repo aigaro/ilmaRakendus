@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UITabBarController, UITabBarControllerDelegate {
     
     let parsedData = WeatherParser()
+    let dayTableView = DayTableViewController()
    
     
     override func viewDidLoad() {
@@ -33,8 +34,11 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
     let nightTabBarItem = UITabBarItem(title: "Night", image: nil, selectedImage: nil)
     nightTab.tabBarItem = nightTabBarItem
 
-    self.viewControllers = [dayTab, nightTab]
-}
+    self.viewControllers = [
+      dayTableView,  dayTab, nightTab
+        ]
+    
+    }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print(viewController.title!)
