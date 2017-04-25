@@ -15,8 +15,8 @@ class DayTableViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         let tableView: UITableView = UITableView()
-        tableView.frame = CGRect(x: 10, y: 10, width: 200, height: 500)
-//        tableView.autoAlignAxis(toSuperviewAxis: .vertical)
+        tableView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width , height: self.view.frame.height)
+        
         tableView.dataSource = self
         tableView.delegate = self
         
