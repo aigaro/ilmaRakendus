@@ -13,14 +13,12 @@ class DayTableViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let tableView: UITableView = UITableView()
-        tableView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width , height: self.view.frame.height)
-        
         tableView.dataSource = self
         tableView.delegate = self
-        
-        self.view.addSubview(tableView)
+    
+        view.addSubview(tableView)
+        tableView.autoPinEdgesToSuperviewEdges()
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

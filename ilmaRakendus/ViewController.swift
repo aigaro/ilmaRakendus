@@ -33,9 +33,10 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
     let nightTab = NightViewController()
     let nightTabBarItem = UITabBarItem(title: "Night", image: nil, selectedImage: nil)
     nightTab.tabBarItem = nightTabBarItem
-
     self.viewControllers = [
-      dayTableView,  dayTab, nightTab
+        UINavigationController(rootViewController: dayTableView),
+        dayTab,
+        nightTab
         ]
     
     }
