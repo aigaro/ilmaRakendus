@@ -9,14 +9,14 @@
 import UIKit
 import PureLayout
 
-class DayTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TestTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let tableView: UITableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
-    
+        
         view.addSubview(tableView)
         tableView.autoPinEdgesToSuperviewEdges()
     }
@@ -34,12 +34,9 @@ class DayTableViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         NSLog("get cell")
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
-        cell.textLabel!.text = "day"
+        cell.textLabel!.text = "test"
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(TestTableViewController(), animated: true)
-        print("Day selected")
-    }
-  }
+
+}
