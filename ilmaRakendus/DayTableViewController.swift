@@ -9,10 +9,13 @@
 import UIKit
 import PureLayout
 
+var testDates:Array = ["D1", "D2", "D3", "D4"]
+
 class DayTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let tableView: UITableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
@@ -23,23 +26,28 @@ class DayTableViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         NSLog("sections")
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         NSLog("rows")
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         NSLog("get cell")
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
-        cell.textLabel!.text = "day"
+        cell.textLabel!.text = testDates[indexPath.row]
+//        cell.textLabel!.text = weather.chosenDate[indexPath.row]
+//        print(weather.chosenDate[0])
+        print("TESTER")
+        print(weather)
+//        print(weather.chosenDate)
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationController?.pushViewController(TestTableViewController(), animated: true)
-        print("Day selected")
+//        print(weather.chosenDate[0])
     }
   }
