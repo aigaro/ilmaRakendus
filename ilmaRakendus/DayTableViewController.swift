@@ -9,9 +9,62 @@
 import UIKit
 import PureLayout
 
+
 var testDates:Array = ["D1", "D2", "D3", "D4"]
 
+protocol Vehicle {
+    var dimensions: CGSize { get }
+}
+
+protocol VehicleAccessories {
+    var radio: Bool { get }
+}
+
+typealias CoolVechile = Vehicle & VehicleAccessories
+
+class Tractor: Vehicle {
+    var dimensions: CGSize = .zero
+}
+
+class Ferrari: CoolVechile {
+    var dimensions: CGSize  = .zero
+    var radio: Bool = true
+}
+
+func hande(vehicle: Vehicle) {
+    
+}
+
+
+//class Car {
+//    var radio: Bool
+//    
+//    init() {
+//        radio = true
+//    }
+//}
+//
+//
+//class CarSubClass: Car {
+//    override var radio: Bool = true
+//}
+
+//hande(vehicle: Tractor())
+//hande(vehicle: Ferrari())
+
+
 class DayTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+  
+    private let weatherData: WeatherData
+    
+    init(weatherData: WeatherData) {
+        self.weatherData = weatherData
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +79,7 @@ class DayTableViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         NSLog("sections")
-        return 1
+        return weatherData.weatherPlaces.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,7 +90,7 @@ class DayTableViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         NSLog("get cell")
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
-        cell.textLabel!.text = testDates[indexPath.row]
+        cell.textLabel!.text = weatherData.weatherPlaces[indexPath.row]
 //        cell.textLabel!.text = weather.chosenDate[indexPath.row]
 //        print(weather.chosenDate[0])
         print("TESTER")
@@ -48,6 +101,5 @@ class DayTableViewController: UIViewController, UITableViewDataSource, UITableVi
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationController?.pushViewController(TestTableViewController(), animated: true)
-//        print(weather.chosenDate[0])
     }
   }

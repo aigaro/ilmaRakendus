@@ -41,5 +41,7 @@ class NightTableViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationController?.pushViewController(NightTableViewController(), animated: true)
         print("Night selected")
+        print(weather)
+
     }
 }
