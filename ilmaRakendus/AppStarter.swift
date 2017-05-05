@@ -23,6 +23,9 @@ class AppStarter {
 
 extension AppStarter: SplashScreenViewControllerDelegate {
     func splashScreenFinished(with weather: WeatherData?) {
-        window?.rootViewController = TabBarController(weatherData: weather!)
+        guard let weather = weather else {
+            return
+        }
+        window?.rootViewController = TabBarController(weatherData: weather)
     }
 }
