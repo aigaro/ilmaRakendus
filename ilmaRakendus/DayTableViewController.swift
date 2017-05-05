@@ -90,12 +90,7 @@ class DayTableViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         NSLog("get cell")
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
-        cell.textLabel!.text = weatherData.weatherPlaces[indexPath.row]
-//        cell.textLabel!.text = weather.chosenDate[indexPath.row]
-//        print(weather.chosenDate[0])
-        print("TESTER")
-        print(weather)
-//        print(weather.chosenDate)
+        cell.textLabel!.text = weatherData.chosenDate[indexPath.row]
         return cell
     }
 
