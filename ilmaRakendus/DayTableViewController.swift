@@ -91,6 +91,9 @@ class DayTableViewController: UIViewController, UITableViewDataSource, UITableVi
         NSLog("get cell")
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
         cell.textLabel!.text = weatherData.chosenDate[indexPath.row]
+        cell.detailTextLabel?.text = "Day"
+        cell.imageView?.image = UIImage(named:weatherData.weatherPlacePhenomenonDay)
+        print(weatherData.weatherPlacePhenomenonDay)
         return cell
     }
 

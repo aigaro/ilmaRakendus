@@ -34,7 +34,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let dayTableTabBarItem = UITabBarItem(title: "Day table", image: nil, selectedImage: nil)
         dayTableView.tabBarItem = dayTableTabBarItem
         
-        let nightTableView = UINavigationController(rootViewController: NightTableViewController())
+        let nightTableView = UINavigationController(rootViewController: NightTableViewController(weatherData: weatherData))
         let nightTableTabBarItem = UITabBarItem(title: "Night table", image: nil, selectedImage: nil)
         nightTableView.tabBarItem = nightTableTabBarItem
         

@@ -10,7 +10,16 @@ import UIKit
 import PureLayout
 
 class NightTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    private let weatherData: WeatherData
     
+    init(weatherData: WeatherData) {
+        self.weatherData = weatherData
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         let tableView: UITableView = UITableView()
@@ -28,18 +37,19 @@ class NightTableViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         NSLog("rows")
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         NSLog("get cell")
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
-        cell.textLabel!.text = "night"
+        cell.textLabel!.text = weatherData.chosenDate[indexPath.row]
+        cell.detailTextLabel?.text = "Night"
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(NightTableViewController(), animated: true)
+        navigationController?.pushViewController(TestTableViewController(), animated: true)
         print("Night selected")
         print(weather)
 
