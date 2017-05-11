@@ -24,6 +24,8 @@ struct WeatherData {
     var chosenDate = [String]()
     var weatherPlacePhenomenonDay = String()
     var weatherPlacePhenomenonNight = String()
+    var dayImages = [String]()
+    var nightImages = [String]()
     var weatherPlaceTemperatureNight = Int()
     var weatherPlaceTemperatureDay = Int()
 

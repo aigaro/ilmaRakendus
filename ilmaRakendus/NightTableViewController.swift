@@ -45,6 +45,8 @@ class NightTableViewController: UIViewController, UITableViewDataSource, UITable
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
         cell.textLabel!.text = weatherData.chosenDate[indexPath.row]
         cell.detailTextLabel?.text = "Night"
+        cell.imageView?.image = UIImage(named: weatherData.nightImages[indexPath.row])
+        print(weatherData.nightImages)
         return cell
     }
     
