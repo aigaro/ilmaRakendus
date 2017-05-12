@@ -1,5 +1,5 @@
 //
-//  DayPlaceTableViewController.swift
+//  NightPlaceTableViewController.swift
 //  ilmaRakendus
 //
 //  Created by Aigar Ottas on 12/05/2017.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class DayPlaceTableViewController: UITableViewController {
-   
+class NightPlaceTableViewController: UITableViewController {
+    
     private let weatherData: WeatherData
     
     init(weatherData: WeatherData) {
@@ -29,16 +29,16 @@ class DayPlaceTableViewController: UITableViewController {
         
         view.addSubview(tableView)
         tableView.autoPinEdgesToSuperviewEdges()
-
-
+        
+        
     }
-
-
-
+    
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return weather.weatherPlaces.count
     }
@@ -50,11 +50,11 @@ class DayPlaceTableViewController: UITableViewController {
         case 0:
             cell.textLabel?.text = weather.weatherPlaces[indexPath.row]
             
-            cell.imageView?.image = UIImage(named: weatherData.placePhenomenonDay[indexPath.row])
+            cell.imageView?.image = UIImage(named: weatherData.placePhenomenonNight[indexPath.row])
             cell.detailTextLabel?.text = "\(weatherData.placeTemperatureNight[indexPath.row]) to \(weatherData.placeTemperatureDay[indexPath.row])"
             return cell
         case 1...weather.weatherPlaces.count:
-            cell.textLabel?.text = weather.weatherTextDay
+            cell.textLabel?.text = weather.weatherTextNight
             return cell
         default:
             return cell
@@ -65,6 +65,6 @@ class DayPlaceTableViewController: UITableViewController {
         
     }
     
-
-
+    
+    
 }

@@ -50,7 +50,7 @@ class NightTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(TestTableViewController(), animated: true)
-     
+        weather.selectedDate = indexPath.row
+        navigationController?.pushViewController(NightPlaceTableViewController(weatherData:weatherData), animated: true)
     }
 }
