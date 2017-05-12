@@ -36,6 +36,15 @@ class WeatherParser {
         weather.weatherPlaceTemperatureNight = Int(xmlData["forecasts"]["forecast"][0]["night"]["place"][weatherPlace]["tempmin"].element!.text!)!
         weather.weatherPlaceTemperatureDay = Int(xmlData["forecasts"]["forecast"][0]["day"]["place"][weatherPlace]["tempmax"].element!.text!)!
         
+        for i in 0...5 {
+            weather.placePhenomenonDay.append(xmlData["forecasts"]["forecast"][0]["day"]["place"][i]["phenomenon"].element!.text!)
+        }
+        for i in 0...5 {
+            weather.placePhenomenonNight.append(xmlData["forecasts"]["forecast"][0]["night"]["place"][i]["phenomenon"].element!.text!)
+        }
+        
+
+        
         for i in 0...3 {
             weather.dayImages.append(xmlData["forecasts"]["forecast"][i]["day"]["phenomenon"].element!.text!)
         }

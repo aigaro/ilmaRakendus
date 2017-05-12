@@ -14,6 +14,7 @@
 		08B02DDC1EACC137002E1780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B02DDB1EACC137002E1780 /* Assets.xcassets */; };
 		08B02DDF1EACC137002E1780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B02DDD1EACC137002E1780 /* LaunchScreen.storyboard */; };
 		0AF1BA301EB7595F00183DB9 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1BA2F1EB7595F00183DB9 /* WeatherData.swift */; };
+		0AF280F41EC5C4F000CB59CA /* DayPlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF280F31EC5C4F000CB59CA /* DayPlaceTableViewController.swift */; };
 		0AF2A8971EB8B66A0062F887 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2A8961EB8B66A0062F887 /* Globals.swift */; };
 		0AF648A91EBC996F00E5855D /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF648A81EBC996F00E5855D /* WeatherManager.swift */; };
 		0AF648AB1EBC99E800E5855D /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF648AA1EBC99E800E5855D /* SplashScreenViewController.swift */; };
@@ -34,6 +35,7 @@
 		08B02DDE1EACC137002E1780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08B02DE01EACC137002E1780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AF1BA2F1EB7595F00183DB9 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		0AF280F31EC5C4F000CB59CA /* DayPlaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayPlaceTableViewController.swift; sourceTree = "<group>"; };
 		0AF2A8961EB8B66A0062F887 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		0AF648A81EBC996F00E5855D /* WeatherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		0AF648AA1EBC99E800E5855D /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				270F915E1EAE2BDC00A4CF0D /* DayTableViewController.swift */,
 				0AF869771EB214E9002DD85A /* NightTableViewController.swift */,
 				0AF869791EB21AFC002DD85A /* TestTableViewController.swift */,
+				0AF280F31EC5C4F000CB59CA /* DayPlaceTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				08B02DD51EACC137002E1780 /* AppDelegate.swift in Sources */,
 				0AF648AB1EBC99E800E5855D /* SplashScreenViewController.swift in Sources */,
 				0AF648AD1EBCA1E000E5855D /* AppStarter.swift in Sources */,
+				0AF280F41EC5C4F000CB59CA /* DayPlaceTableViewController.swift in Sources */,
 				0AF8697A1EB21AFC002DD85A /* TestTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

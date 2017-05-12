@@ -93,11 +93,12 @@ class DayTableViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.textLabel!.text = weatherData.chosenDate[indexPath.row]
         cell.detailTextLabel?.text = "Day"
         cell.imageView?.image = UIImage(named:weatherData.dayImages[indexPath.row])
-        print(weatherData.dayImages)
+        
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(TestTableViewController(), animated: true)
+        weather.selectedDate = indexPath.row
+        navigationController?.pushViewController(DayPlaceTableViewController(weatherData:weatherData), animated: true)
     }
   }

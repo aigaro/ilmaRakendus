@@ -46,14 +46,11 @@ class NightTableViewController: UIViewController, UITableViewDataSource, UITable
         cell.textLabel!.text = weatherData.chosenDate[indexPath.row]
         cell.detailTextLabel?.text = "Night"
         cell.imageView?.image = UIImage(named: weatherData.nightImages[indexPath.row])
-        print(weatherData.nightImages)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationController?.pushViewController(TestTableViewController(), animated: true)
-        print("Night selected")
-        print(weather)
-
+     
     }
 }
