@@ -19,7 +19,11 @@ class SplashScreenViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        view.backgroundColor = .blue
+//        view.backgroundColor = .blue
+//        view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "splash"))
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "splash.jpg")
+        self.view.insertSubview(backgroundImage, at: 0)
         manager.reloadWeather { [weak self] weather in
             self?.delegate?.splashScreenFinished(with: weather)
         }
